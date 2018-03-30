@@ -3,12 +3,27 @@ class BlogController < ApplicationController
     @blogs = Blog.all
   end
 
-  def show
+  def new
+
   end
 
-  def new
+  def create
+
+  end
+
+  def show
+
   end
 
   def edit
+    
+  end
+
+  def update
+
+  end
+
+  def destroy
+
   end
 end
