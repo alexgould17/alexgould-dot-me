@@ -5,7 +5,9 @@ This readme serves as a detailed overview and, until site launch, a checklist of
 ## General Checklist
 - Initialize rails & add proper dependencies.
 - Initialize HomeController & add Landing, About & Thanks views.
-- Initialize Blog model & add test cases.
+- Initialize Blog model & add tests.
+- Initialize BlogController & add tests.
+- Flesh out blog views.
 
 ## Files & Data
 
@@ -32,7 +34,7 @@ This readme serves as a detailed overview and, until site launch, a checklist of
 - Home - app/views/home/index - / - HomeController - The main page. Shows a picture of me, my 10 second elevator pitch bio (links to detailed bio), contact info (with included email mini-form for resume request), and a list of my projects, each in a separate box with links to the project page.
 - Bio - app/views/home/bio - /bio - HomeController - My bio. Has a more detailed description of me, my programming journey, my core beliefs, my interests outside of work (a box for each major hobby), and accompanying photos.
 - Thanks - app/views/home/thanks - thanks - HomeController - A list of people, organizations & technologies I am thankful for in my journey in general & for helping me with this website in particular.
-- Blog Main - app/views/blog/index - /blog - BlogController - My blogposts. Simply lists each one with the title & first-paragraph synopsis/hook in its own box with a link to go to the full post. Small header with a little blurb below it like "my random ramblings" or something to that effect.
+- Blog Main - app/views/blog/index - /blog - BlogController - My blogposts. Simply lists each one with the title & first-paragraph hook in its own box with a link to go to the full post. Small header with a little blurb below it like "my random ramblings" or something to that effect.
 - Blog Post - app/views/blog/post - /blog/#id -  BlogController - A blogpost. Just the title & post along with a timestamp and author name (which should probably always be me? Might leave that open just in case this grows & I want to have the freedom to have guests).
 - Projects Main - app/views/project/index - /projects - ProjectController - A listing of all my projects. Each one should be in its own box with a title, short description, screenshot & link to project page.
 - Project Page - app/views/project/page - /projects/#id - ProjectController - A more intimate look at a project. Title & pic, then a link to the hosted site & a link to the source code, followed by an in-depth description of what the project was, what the goals were, and what technologies were used in the project.
