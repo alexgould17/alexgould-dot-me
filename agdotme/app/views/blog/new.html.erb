@@ -1,2 +1,14 @@
-<h1>Blog#new</h1>
-<p>Find me in app/views/blog/new.html.erb</p>
+<h1>Write a New Blog Post</h1>
+<%= form_for @blog do |f| %>
+  <h2><%= f.label :title, "Post Title" %></h2>
+  <%= f.text_field :title %>
+
+  <h2><%=f.label :author, "Post Author" %></h2>
+  <%= f.text_field :author %>
+
+  <h2><%= f.label :hook, "Hook paragraph" %></h2>
+  <%= f.text_area :hook %>
+
+  <h2><%= f.label :body, "#content" %></h2>
+  <%= f.text_area :body %> 
+<% end %>

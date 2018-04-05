@@ -39,12 +39,12 @@ RSpec.describe BlogController, type: :controller do
     end
 
     it "assigns the new blog to @blog" do
-      post :create, blog: {title: "t", author: "a", hook: "h", body: "b"}
+      post :create, params: { blog: {title: "t", author: "a", hook: "h", body: "b"}}
       expect(assigns(:blog)).to eq Blog.last
     end
 
     it "redirects to the new blog" do
-      post :create, blog: {title: "t", author: "a", hook: "h", body: "b"}
+      post :create, params: { blog: {title: "t", author: "a", hook: "h", body: "b"}}
       expect(response).to redirect_to Blog.last
     end
   end
@@ -73,7 +73,7 @@ RSpec.describe BlogController, type: :controller do
     end
 
     it "assigns blog to be updated to @blog" do
-      get :edit, {id: test_blog.id}
+      get :edit, params: { id: test_blog.id }
       blog_instance = assigns(:blog)
 
       expect(blog_instance.id).to eq test_blog.id
@@ -91,7 +91,7 @@ RSpec.describe BlogController, type: :controller do
       new_hook = "i"
       new_body = "c"
 
-      put :update, id: test_blog.id, blog: {title: new_title, author: new_author, hook: new_hook, body: new_body}
+      put :update, params: { id: test_blog.id, blog: { title: new_title, author: new_author, hook: new_hook, body: new_body }}
       updated_blog = assigns(blog)
 
       expect(blog_instance.id).to eq test_blog.id
@@ -102,21 +102,21 @@ RSpec.describe BlogController, type: :controller do
     end
 
     it "redirects to the updated post" do
-      put :update, id: test_blog.id, blog: {title: "u", author: "b", hook: "i", body: "c"}
+      put :update, params: { id: test_blog.id, blog: {title: "u", author: "b", hook: "i", body: "c" }}
       expect(response).to redirect_to test_blog
     end
   end
 
   describe "DELETE #destroy" do
     it "deletes the blog" do
-      delete :destroy, {id: test_blog.id}
+      delete :destroy, params: { id: test_blog.id }
 
       count = Blog.where({id: test_blog.id}).size
       expect(count).to eq 0
     end
 
     it "redirects to Blog index" do
-      delete :destroy, {id: test_blog.id}
+      delete :destroy, params: { id: test_blog.id }
       expect(response).to redirect_to blogs_path
     end
   end
