@@ -1,2 +1,3 @@
-<h1>Blogs#show</h1>
-<p>Find me in app/views/blogs/show.html.erb</p>
+<h1><%= @blog.title %></h1>
+<p>posted at <%= @blog.created_at %> by <%= @blog.author %></p>
+<%= @blog.body %>
