@@ -1,6 +1,7 @@
 <h1>Blogs</h1>
+<%= link_to "Create New Blog", new_blog_path %>
 <% @blogs.each do |blog| %>
-  <h2><%= blog.title %></h2>
+  <h2><%= link_to blog.title, blog %></h2>
   <p>posted at <%= blog.created_at %> by <%= blog.author %></p>
-  <p><%= blog.hook %></p>
+  <p><%= link_to blog.hook, blog %></p>
 <% end %>
