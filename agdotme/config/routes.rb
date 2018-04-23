@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   # BlogController routes, standard RESTful CRUD routes.
   resources :blogs
 
+  # ProjectsController routes, standard RESTful CRUD routes.
+  resources :projects
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

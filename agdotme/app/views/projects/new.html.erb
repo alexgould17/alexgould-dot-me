@@ -1,0 +1,22 @@
+<h1>Create Project</h1>
+<%= form_for @project do |f| %>
+  <%= f.label :title, "Project Title" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :synopsis, "Project Synopsis" %>
+  <%= f.text_field :synopsis %>
+
+  <%= f.label :site_link, "Site Link (Heroku for most)" %>
+  <%= f.text_field :site_link %>
+
+  <%= f.label :source_link, "Link to Source Code (Github for most)" %>
+  <%= f.text_field :source_link %>
+
+  <%= f.label :screenshot_link, "Link to Screenshot (AWS hosting for most)" %>
+  <%= f.text_field :screenshot_link %>
+
+  <%= f.label :description, "Project Description (go in-depth)" %>
+  <%= f.text_area :description %>
+
+  <%= f.submit "Create & Publish" %>
+<% end %>

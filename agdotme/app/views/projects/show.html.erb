@@ -1,0 +1,8 @@
+<h1><%= @project.title %></h1>
+<p>posted at <%= @project.created_at %></p>
+<%= image_tag @project.screenshot_link, alt: "Screenshot preview of #{@project.title}" %>
+<%= @project.body.html_safe %>
+View this project <%= link_to "here", @project.site_link %>
+View the source code for the project <%= link_to "here", @project.source_link %>
+<%= link_to "Edit This Project", edit_project_path %>
+<%= link_to "Delete This Project", @project, method: :delete %>
