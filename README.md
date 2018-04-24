@@ -3,9 +3,10 @@
 This readme serves as a detailed overview and, until site launch, a checklist of all the things that need to be done. Finished & tested line items will be marked with a ^ at the end. Implemented but not tested/work-in-progress items will be marked with a # at the end. Not yet touched upon items will be left blank. The purpose of this is to provide maximum transparency & showcase (honestly, mostly to myself) my workflow that it may be viewed, & improved upon where necessary. Also, I believe in putting things in writing & backing them up because it makes the responsibility much harder to escape, which, in turn, promotes accountability. Finally, I work much faster when I have a framework to guide me; especially so when I can read specific items off a checklist & just hammer those out. To put it in gaming terms, I'm a quest completer. Anything too sandbox-y overwhelms me fairly quickly. Give me concrete goals & I'll fight infinite super mutants to complete them. **If you can't find the info you need in this readme, please look at the source code. All the names of variables/methods/etc. should be intuitive & comments are placed where more clarification is needed!**
 
 ## General Checklist
-- Initialize rails & add proper dependencies.
-- Initialize HomeController & add Landing, About & Thanks views.
-- Initialize Blog model & add test cases.
+- Application layout page
+- Styling
+- Publish features for projects & blogs
+- Adding proper content to HomeControllerpages.
 
 ## Files & Data
 
