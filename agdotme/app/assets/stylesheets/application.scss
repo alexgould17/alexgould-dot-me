@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+// Variable definitions:
+$background: #d6d6d6;
+$text: #252525;
+$nav-bg: #2525d6;
+$ext-link: #259669;
+$int-link: #256996;
+
+body {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: $text;
+  background-color: $background;
+}
+.navbar {
+  width: 100%;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  background-color: $nav-bg;
+  ul {
+    height: 100%;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    list-style: none;
+    li {
+      height: 2em;
+      display: inline;
+      border: 0px;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}
+
+.nav-link {
+  color: $background;
+  a, a:visited, a:hover, a:active {
+    color: $background;
+    background-color: $nav-bg;
+    text-decoration: none;
+    padding: 0 0.5em 0 0.5em;
+    font-size: 2em;
+    font-family: Tahoma, Geneva, sans-serif;
+  }
+  a:hover {
+    background-color: darken($nav-bg, 10%);
+  }
+  a:active {
+    background-color: lighten($nav-bg, 10%);
+  }
+}
+
+main {
+  a {
+    text-decoration: none;
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+  .external-link {
+    color: $ext-link;
+    &:active {
+      color: lighten($ext-link, 15%);
+    }
+  }
+  .internal-link {
+    color: $int-link;
+    &:active {
+      color: lighten($int-link, 15%);
+    }
+  }
+}

@@ -5,7 +5,7 @@ This readme serves as a detailed overview and, until site launch, a checklist of
 ## General Checklist
 - Styling
 - Publish features for projects & blogs
-- Adding proper content to HomeControllerpages.
+- Adding proper content to HomeController pages.
 
 ## Files & Data
 
@@ -41,3 +41,9 @@ This readme serves as a detailed overview and, until site launch, a checklist of
 - HomeController - Controls the Landing, About & Thanks pages. Should have ajax for email submission of the resume request form.
 - BlogController - Controls all the blog pages & pulls posts from the database accordingly. No permissions needed as only read/index options will be available on web view for this model (create/update/delete handled on backend until further notice).
 - ProjectController - Controls all the project pages & pulls posts from the database accordingly. No permissions needed as only read/index options will be available on web view for this model (create/update/delete handled on backend until further notice).
+
+## Styling
+
+### Navigation
+- .navbar — the area containing all the navigation links —
+- .nav-link — a navigation link —
