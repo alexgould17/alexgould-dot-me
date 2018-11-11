@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'bio' => 'home#about'
   get 'thanks' => 'home#thanks'
+  get 'css_test' => 'home#csstest'
 
   # BlogController routes, standard RESTful CRUD routes.
   resources :blogs

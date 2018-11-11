@@ -7,4 +7,8 @@ class HomeController < ApplicationController
 
   def thanks
   end
+
+  def csstest
+
+  end
 end

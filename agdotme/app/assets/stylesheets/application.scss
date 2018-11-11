@@ -17,6 +17,9 @@
 $background: #d6d6d6;
 $text: #252525;
 $nav-bg: #2525d6;
+$nav-height: 2em;
+$nav-vert-padding: 0.2em;
+$nav-horiz-padding: 0.5em;
 $ext-link: #259669;
 $int-link: #256996;
 
@@ -30,41 +33,40 @@ body {
 }
 .navbar {
   width: 100%;
+  height: $nav-height + (2 * $nav-vert-padding);
   margin: 0px;
   border: 0px;
   padding: 0px;
   background-color: $nav-bg;
   ul {
-    height: 100%;
+    height: $nav-height + (2 * $nav-vert-padding);
     margin: 0px;
     border: 0px;
     padding: 0px;
     list-style: none;
-    li {
-      height: 2em;
+    li.navigation-link {
+      color: $background;
+      height: $nav-height + (2 * $nav-vert-padding);
       display: inline;
       border: 0px;
       margin: 0px;
-      padding: 0px;
+      padding: 0 $nav-horiz-padding 0 $nav-horiz-padding;
+      a, a:visited, a:hover, a:active {
+        height: 100%;
+        padding: 0;
+        color: $background;
+        background-color: $nav-bg;
+        text-decoration: none;
+        font-size: 2em;
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+      a:hover {
+        background-color: darken($nav-bg, 10%);
+      }
+      a:active {
+        background-color: lighten($nav-bg, 10%);
+      }
     }
-  }
-}
-
-.nav-link {
-  color: $background;
-  a, a:visited, a:hover, a:active {
-    color: $background;
-    background-color: $nav-bg;
-    text-decoration: none;
-    padding: 0 0.5em 0 0.5em;
-    font-size: 2em;
-    font-family: Tahoma, Geneva, sans-serif;
-  }
-  a:hover {
-    background-color: darken($nav-bg, 10%);
-  }
-  a:active {
-    background-color: lighten($nav-bg, 10%);
   }
 }
 
